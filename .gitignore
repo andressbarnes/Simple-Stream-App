@@ -28,6 +28,7 @@ client/yarn-error.log*
 api/node_modules
 api/.pnp
 api/.pnp.js
+api/db.json
 
 
 # testing
