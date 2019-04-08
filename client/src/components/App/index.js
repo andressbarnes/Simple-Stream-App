@@ -1,20 +1,21 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import * as routes from '../../routes';
+import history from '../../history';
 
 import NavHeader from '../Header/Header';
 
 const App = () => {
   return (
     <div className='ui container'>
-      <BrowserRouter>
+      <Router history={history}>
         <NavHeader />
         <Switch>
           {routes.publicRoutes.map(props => (
             <Route {...props} />
           ))}
         </Switch>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 };

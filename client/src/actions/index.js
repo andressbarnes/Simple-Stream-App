@@ -1,3 +1,4 @@
+import history from '../history';
 import streams from '../api/streams';
 import {
   SIGN_IN,
@@ -39,6 +40,8 @@ export const createStream = formValues => async (dispatch, getState) => {
     type: POST_STREAM,
     payload: response.data
   });
+  //redirect user
+  history.push('/');
 };
 
 export const getStream = id => async dispatch => {
