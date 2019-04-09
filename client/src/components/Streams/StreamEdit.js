@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getStream, updateStream } from '../../actions';
@@ -21,7 +22,10 @@ class StreamsEdit extends Component {
     return (
       <div>
         <h2>Strea Edit</h2>
-        <StreamForm action={this.onSubmit} initialValues={this.props.stream} />
+        <StreamForm
+          action={this.onSubmit}
+          initialValues={_.pick(this.props.stream, 'title', 'description')}
+        />
       </div>
     );
   }

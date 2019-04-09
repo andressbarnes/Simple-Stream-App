@@ -28,7 +28,6 @@ client/yarn-error.log*
 api/node_modules
 api/.pnp
 api/.pnp.js
-api/db.json
 
 
 # testing
@@ -47,5 +46,3 @@ api/.env.production.local
 api/npm-debug.log*
 api/yarn-debug.log*
 api/yarn-error.log*
-
-api/db.json
