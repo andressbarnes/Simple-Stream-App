@@ -11,7 +11,7 @@ class StreamsEdit extends Component {
   }
 
   onSubmit = formValues => {
-    this.props.updateStream(this.props.stream.id, formValues);
+    this.props.updateStream(this.props.match.params.id, formValues);
   };
 
   render() {

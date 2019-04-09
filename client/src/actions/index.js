@@ -54,11 +54,7 @@ export const getStream = id => async dispatch => {
 };
 
 export const updateStream = (id, formValues) => async (dispatch, getState) => {
-  const { userId } = getState().auth;
-  const response = await streams.put(`./streams/${id}`, {
-    ...formValues,
-    userId
-  });
+  const response = await streams.patch(`./streams/${id}`, { formValues });
 
   dispatch({
     type: PUT_STREAM,
