@@ -47,3 +47,5 @@ api/.env.production.local
 api/npm-debug.log*
 api/yarn-debug.log*
 api/yarn-error.log*
+
+api/db.json

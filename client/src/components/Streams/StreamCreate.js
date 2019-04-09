@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { createStream } from '../../actions';
-import StreamForm from './StreamForm';
+import StreamForm from './Forms/StreamForm';
 
 class StreamCreate extends Component {
   onSubmit = formValues => {
@@ -13,7 +13,7 @@ class StreamCreate extends Component {
     return (
       <div>
         <h2>Create a stream</h2>
-        <StreamForm action={this.onSubmit} values={this.props.formValues} />
+        <StreamForm action={this.onSubmit} initialValues={{}} />
       </div>
     );
   }

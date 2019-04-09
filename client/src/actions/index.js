@@ -53,13 +53,20 @@ export const getStream = id => async dispatch => {
   });
 };
 
-export const updateStream = (id, formValues) => async dispatch => {
-  const response = await streams.put(`./streams/${id}`, formValues);
+export const updateStream = (id, formValues) => async (dispatch, getState) => {
+  const { userId } = getState().auth;
+  const response = await streams.put(`./streams/${id}`, {
+    ...formValues,
+    userId
+  });
 
   dispatch({
     type: PUT_STREAM,
     payload: response.data
   });
+
+  //redirect user
+  history.push('/');
 };
 
 export const deleteStream = id => async dispatch => {
@@ -69,4 +76,7 @@ export const deleteStream = id => async dispatch => {
     type: DELETE_STREAM,
     payload: id
   });
+
+  //redirect user
+  history.push('/');
 };

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Form, Button } from 'semantic-ui-react';
 
-import FormInput from '../Forms/FormInput';
+import FormInput from '../../Forms/FormInput';
 
 class StreamForm extends Component {
   renderInput(formProps) {
