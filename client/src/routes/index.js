@@ -30,6 +30,12 @@ export const publicRoutes = [
     key: 'Stream Edit'
   },
   {
+    component: StreamEdit,
+    path: '/streams/edit/:id',
+    exact: true,
+    key: 'Stream Edit'
+  },
+  {
     component: StreamDelete,
     path: '/streams/delete',
     exact: true,

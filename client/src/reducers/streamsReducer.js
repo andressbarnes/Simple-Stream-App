@@ -13,9 +13,7 @@ const INITIAL_STATE = {};
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case POST_STREAM:
-      return { ...state, [action.payload.id]: action.payload };
     case GET_STREAM:
-      return { ...state, [action.payload.id]: action.payload };
     case PUT_STREAM:
       return { ...state, [action.payload.id]: action.payload };
     case DELETE_STREAM:
