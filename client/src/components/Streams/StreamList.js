@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Item } from 'semantic-ui-react';
+import { Item, Icon } from 'semantic-ui-react';
 import { getStreams } from '../../actions';
 
 class StreamList extends Component {
@@ -18,13 +18,13 @@ class StreamList extends Component {
             to={`./streams/edit/${stream.id}`}
             className='ui button primary'
           >
-            Edit
+            <Icon name='pencil' /> Edit
           </Link>
           <Link
             to={`./streams/delete/${stream.id}`}
             className='ui button negative'
           >
-            Delete
+            <Icon name='trash' /> Delete
           </Link>
         </div>
       );

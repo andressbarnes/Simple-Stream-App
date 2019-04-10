@@ -35,15 +35,12 @@ class StreamDelete extends Component {
     );
 
     return (
-      <div>
-        Stream Delete
-        <Modal
-          title='Delete Stream'
-          content={this.renderModalConent()}
-          actions={modalActions}
-          onDismiss={() => history.push('/')}
-        />
-      </div>
+      <Modal
+        title='Delete Stream'
+        content={this.renderModalConent()}
+        actions={modalActions}
+        onDismiss={() => history.push('/')}
+      />
     );
   }
 }
