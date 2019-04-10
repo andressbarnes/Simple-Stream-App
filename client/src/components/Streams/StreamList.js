@@ -35,7 +35,7 @@ class StreamList extends Component {
     if (this.props.isSignedIn) {
       return (
         <div style={{ textAlign: 'right ' }}>
-          <Link to='./streams/create' className='ui button primary'>
+          <Link to='./streams/new' className='ui button primary'>
             Create Stream
           </Link>
         </div>
@@ -50,7 +50,9 @@ class StreamList extends Component {
           {this.renderAdminControls(this.props.streams[index])}
           <i className='large middle aligned icon camera' />
           <div className='content'>
-            <Link to={`./streams/${cur.id}`}>{cur.title}</Link>
+            <Link to={`./streams/${cur.id}`} className='header'>
+              {cur.title}
+            </Link>
             <div className='description'>{cur.description}</div>
           </div>
         </Item>

@@ -12,22 +12,10 @@ export const publicRoutes = [
     key: 'Stream List'
   },
   {
-    component: StreamShow,
-    path: '/streams/show',
-    exact: true,
-    key: 'Stream Show'
-  },
-  {
     component: StreamCreate,
-    path: '/streams/create',
+    path: '/streams/new',
     exact: true,
     key: 'Stream Create'
-  },
-  {
-    component: StreamEdit,
-    path: '/streams/edit',
-    exact: true,
-    key: 'Stream Edit'
   },
   {
     component: StreamEdit,
@@ -40,5 +28,11 @@ export const publicRoutes = [
     path: '/streams/delete/:id',
     exact: true,
     key: 'Stream Delete'
+  },
+  {
+    component: StreamShow,
+    path: '/streams/:id',
+    exact: true,
+    key: 'Stream Show'
   }
 ];
