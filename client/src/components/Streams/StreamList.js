@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Item, Button } from 'semantic-ui-react';
+import { Item } from 'semantic-ui-react';
 import { getStreams } from '../../actions';
 
 class StreamList extends Component {
@@ -20,7 +20,12 @@ class StreamList extends Component {
           >
             Edit
           </Link>
-          <Button className='ui button negative'>Delete</Button>
+          <Link
+            to={`./streams/delete/${stream.id}`}
+            className='ui button negative'
+          >
+            Delete
+          </Link>
         </div>
       );
     }

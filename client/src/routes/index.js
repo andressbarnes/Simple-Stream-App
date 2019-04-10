@@ -37,7 +37,7 @@ export const publicRoutes = [
   },
   {
     component: StreamDelete,
-    path: '/streams/delete',
+    path: '/streams/delete/:id',
     exact: true,
     key: 'Stream Delete'
   }
